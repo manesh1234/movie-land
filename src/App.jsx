@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import styles from './App.module.css';
 import MovieCard from './MovieCard';
 import { FcSearch } from 'react-icons/fc';
-import Footer from './Footer';
 
 const API_URL = "http://www.omdbapi.com?apikey=3482c7da";
 
@@ -30,7 +29,6 @@ const App = () => {
             <FcSearch className={styles.searchbtn} />
         </div>
 
-
         {
             movies && movies.length > 1 ? (
                 <div className={styles.container}>
@@ -38,7 +36,10 @@ const App = () => {
                 </div>
             ) : search.isSearch && <h2 style={{ marginTop: "20px", color: "white" }}>No results found !</h2>
         }
-            
+
+        <div className={styles.footer} style={!search.isSearch?{marginTop:"495px"}:{marginTop:"0px"}}>
+            <h1>Made with <img src="https://img.icons8.com/color/35/000000/filled-like.png" /> by <a href="https://www.linkedin.com/in/manesh-ram/" target={'_blank'}>Manesh Ram</a></h1>
+        </div>    
     </div>
     
 }
