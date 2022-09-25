@@ -51,3 +51,12 @@
         justify-content: center;
     }
 }
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    background-color: #ffd166;
+    margin-left: 32%;
+    opacity: 0.7;
+    font-size: 12px;
+}

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import styles from './App.module.css';
 import MovieCard from './MovieCard';
 import { FcSearch } from 'react-icons/fc';
+import Footer from './Footer';
 
 const API_URL = "http://www.omdbapi.com?apikey=3482c7da";
 
@@ -37,7 +38,9 @@ const App = () => {
                 </div>
             ) : search.isSearch && <h2 style={{ marginTop: "20px", color: "white" }}>No results found !</h2>
         }
+            
     </div>
+    
 }
 
 export default App;
