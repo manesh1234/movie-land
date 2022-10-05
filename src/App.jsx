@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 import styles from './App.module.css';
 import MovieCard from './MovieCard';
 import { FcSearch } from 'react-icons/fc';
-import { AiFillHeart } from "react-icons/ai"
+import { AiFillHeart } from "react-icons/ai";
+
 const API_URL = "https://www.omdbapi.com?apikey=3482c7da";
 
 const App = () => {
@@ -11,7 +12,7 @@ const App = () => {
     const [search, setSearch] = useState({ name: "", isSearch: false });
 
     useEffect(() => {
-        if (search.name != "") {
+        if (search.name !== "") {
             const searchMovies = async () => {
                 const response = await fetch(`${API_URL}&s=${search.name}`);
                 const data = await response.json();
@@ -20,7 +21,6 @@ const App = () => {
             searchMovies()
         }
     }, [search]);
-
 
     return (
         <div className={styles.app}>
