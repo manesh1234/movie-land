@@ -4,7 +4,7 @@ import styles from './App.module.css';
 import MovieCard from './MovieCard';
 import { FcSearch } from 'react-icons/fc';
 
-const API_URL = "http://www.omdbapi.com?apikey=3482c7da";
+const API_URL = "https://www.omdbapi.com?apikey=3482c7da";
 
 const App = () => {
     const [movies, setMovies] = useState([]);
