@@ -37,9 +37,9 @@ const App = () => {
             </div>
 
             {movies && movies.length > 1 ? (
-                <div className={styles.container}>
+                <div className={styles.container} >
                     {movies.map((c, index) => (
-                        <MovieCard key={index} movie={c} />
+                        <a href={`https://www.imdb.com/title/${c.imdbID}/`} target="_blank" key={index}> <MovieCard movie={c} /> </a>
                     ))}
                 </div>
             ) : (
